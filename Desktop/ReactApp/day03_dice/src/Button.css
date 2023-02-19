@@ -1,0 +1,17 @@
+.Button{
+    padding: 14px 27px;
+    border-radius: 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.Button.blue{
+    border: solid 1px #7090ff;
+    color: #7090ff;
+    background-color: rgba(0,89,255,.2);
+}
+.Button.red{
+    border: solid 1px #ff466f;
+    color: #ff466f;
+    background-color: rgba(255,78,78,.2);
+}
