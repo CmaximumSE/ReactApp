@@ -1,19 +1,16 @@
-import React from 'react'
-import ReviewItem from './ReviewItem'
+import React from "react";
+import ReviewItem from "./ReviewItem";
 
-export default function ReviewList({reivewList}) {
-
+export default function ReviewList({ reviewList ,onRemove,onEdit}) {
   return (
-   
-    <div>
-      <h2 className='ReviewList'>리뷰 리스트</h2>
-      <p>{reivewList.length}개의 리뷰가 있습니다.</p>
+    <div className="ReviewList">
+      <h2>리뷰 리스트</h2>
+      <p>{reviewList.length}개의 리뷰가 있습니다</p>
       <div>
-        {reivewList.map( (list) => (
-            <ReviewItem {...list} key={list.id}></ReviewItem>
+        {reviewList.map((list) => (
+          <ReviewItem {...list}  key={list.id} onRemove={onRemove}onEdit={onEdit}/>
         ))}
-        
       </div>
     </div>
-  )
+  );
 }
